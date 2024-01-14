@@ -1,0 +1,38 @@
+header {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px 0 73px 0;
+
+    h1 {
+      color: #000;
+      font-size: 24px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+      a {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      button {
+        display: flex;
+        padding: 8px 22px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        background: #000;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+}

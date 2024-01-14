@@ -1,0 +1,31 @@
+#columnImg {
+  .columnImg {
+    margin-top: 70px;
+    img {
+      border-radius: 12px;
+    }
+    .first {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__first {
+      display: flex;
+      gap: 20px;
+    }
+    .second {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .last {
+      display: flex;
+      gap: 20px;
+    }
+    h1 {
+      margin: 90px 0;
+      color: #000;
+      font-size: 40px;
+      font-weight: 600;
+    }
+  }
+}

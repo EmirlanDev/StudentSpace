@@ -1,0 +1,125 @@
+#signIn {
+  display: flex;
+  .signIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    h1 {
+      color: #000;
+      font-size: 40px;
+      font-weight: 500;
+      margin-bottom: 42px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      label {
+        color: #000;
+        font-size: 16.741px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      input {
+        width: 502.238px;
+        height: 58.594px;
+        border-radius: 6.697px;
+        border: 0.837px solid rgba(0, 0, 0, 0.4);
+        padding: 0 16px;
+        color: rgba(0, 0, 0, 0.5);
+        font-family: Inter;
+        font-size: 16.741px;
+        font-weight: 400;
+        outline: none;
+        &:nth-child(2) {
+          margin-bottom: 23px;
+        }
+      }
+      .eye {
+        position: absolute;
+        right: 15px;
+        top: 153px;
+        font-size: 35px;
+        cursor: pointer;
+        padding: 5px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      button {
+        display: flex;
+        padding: 16px 221.5px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 12px;
+        background: #1d53c5;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 40px 0;
+      }
+    }
+    h2 {
+      color: #000;
+      font-family: Rubik;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30.503px;
+      span {
+        color: #1d53c5;
+        cursor: pointer;
+      }
+    }
+    p {
+      color: rgba(0, 0, 0, 0.5);
+      font-family: Rubik;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30.503px;
+      position: relative;
+      margin: 26px 0;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 139px;
+        height: 1px;
+        background-color: #1d53c5;
+        top: 50%;
+        left: -167px;
+        transform: translateY(-50%);
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 139px;
+        height: 1px;
+        background: #1d53c5;
+        top: 50%;
+        right: -167px;
+        transform: translateY(-50%);
+      }
+    }
+    .btns {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      button {
+        width: 238.563px;
+        height: 51.061px;
+        border-radius: 5.859px;
+        border: 0.837px solid #1d53c5;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 11px;
+        color: #000;
+        font-size: 20.09px;
+        font-weight: 500;
+        line-height: 30.533px;
+      }
+    }
+  }
+}
