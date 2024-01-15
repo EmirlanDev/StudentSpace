@@ -52,7 +52,7 @@ const AdminPanel = () => {
             alt="profil"
           />
           <div className="adminPanel__profil__text">
-            <h2>Гульзина Кайыпбекова</h2>
+            <h2>Гульзина Кайыпбек кызы</h2>
             <h3>Студентка Motion Web</h3>
           </div>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 const Profil = () => {
   return (
     <section id="profil">
-      <h1>Профиль</h1>
+      <h1 className="title">Профиль</h1>
       <div className="profil">
         <img
           className="profil__background"
@@ -19,8 +19,8 @@ const Profil = () => {
             />
             <div className="profil__info__text-name__edit">
               <div>
-                <h2>Гульзина Кайыпбекова</h2>
-                <h3>Software Engineer</h3>
+                <h2>Гульзина Кайыпбек кызы</h2>
+                <h3>Front-end developer</h3>
               </div>
               <button>Редактировать</button>
             </div>
@@ -39,7 +39,7 @@ const Profil = () => {
           </div>
           <div className="profil__info__date">
             <h4>Дата рождения:</h4>
-            <p>15 июля 2004 года </p>
+            <p>5 февраля 2004 года </p>
           </div>
           <div className="profil__info__mob">
             <h4>Соц. сети:</h4>
