@@ -1,0 +1,171 @@
+#event {
+  padding: 32px 0 50px 40px;
+  .event {
+    width: 65.7vw;
+    &__bnts {
+      display: flex;
+      justify-content: space-between;
+      &__pogination {
+        display: flex;
+        gap: 33px;
+        button {
+          display: flex;
+          padding: 13px 15px;
+          align-items: center;
+          border-radius: 4px;
+          background: #eee;
+          border: none;
+        }
+      }
+      &__date {
+        border-radius: 4px;
+        background: #eee;
+        display: inline-flex;
+        padding: 5px 4px;
+        align-items: flex-start;
+        gap: 5px;
+        button {
+          display: flex;
+          padding: 7px 15px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border: none;
+          background: transparent;
+          color: #000;
+          font-size: 16px;
+          font-weight: 400;
+        }
+        input {
+          display: flex;
+          padding: 2px 7px;
+          align-items: center;
+          gap: -9px;
+          border-radius: 4px;
+          background: #fff;
+          border: none;
+          color: #000;
+          font-size: 16px;
+          font-weight: 400;
+          height: 33px;
+          outline: none;
+        }
+      }
+    }
+    &__carts {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: repeat(3, 279px);
+      grid-auto-rows: 306px;
+      justify-content: space-between;
+      row-gap: 20px;
+      &__cart {
+        position: relative;
+        border-radius: 12px;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        );
+        width: 279px;
+        border-radius: 12px;
+        height: 306px;
+
+        &:hover {
+          .heshteg,
+          h2 {
+            opacity: 0;
+          }
+          .event-cart {
+            background: #000;
+            color: #fff;
+          }
+          .open-event-cart {
+            opacity: 1;
+          }
+        }
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 12px;
+          z-index: -1;
+        }
+        &__btn {
+          display: flex;
+          margin-left: 24px;
+          padding-top: 19px;
+          justify-content: space-between;
+          align-items: center;
+          h5 {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+          }
+          button {
+            display: inline-flex;
+            padding: 5px 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px 0px 0px 8px;
+            background: #fff;
+            border: none;
+            color: #636363;
+            font-size: 12px;
+            font-weight: 400;
+            transition: 0.3s;
+          }
+        }
+        h3 {
+          color: #fff;
+          font-size: 20px;
+          font-weight: 600;
+          margin: 19px 0 0 24px;
+        }
+        &__heshteg {
+          margin: 124px 0 0 24px;
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          transition: 0.3s;
+          button {
+            display: flex;
+            padding: 5px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.54);
+            border: none;
+          }
+        }
+        h2 {
+          color: #fff;
+          font-size: 20px;
+          font-weight: 500;
+          margin: 20px 0 0 143px;
+          transition: 0.3s;
+        }
+        &__open {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          opacity: 0;
+          padding: 10px 23.5px;
+          display: flex;
+          align-items: center;
+          gap: 36px;
+          border-radius: 0px 0px 12px 12px;
+          background: #005bfc;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+          border: none;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
