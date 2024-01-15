@@ -1,0 +1,67 @@
+#adminPanel {
+  display: flex;
+  .adminPanel {
+    background: #1d53c5;
+    padding: 50px 40px;
+    max-width: 370px;
+    overflow-y: scroll;
+    position: fixed;
+    inset: 0;
+    &::-webkit-scrollbar {
+      background-color: #1d53c5;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #5388f9;
+      border-radius: 5px;
+    }
+    &__profil {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #fff;
+      cursor: pointer;
+      img {
+        width: 84px;
+        height: 84px;
+        border-radius: 84px;
+        object-fit: cover;
+      }
+      &__text {
+        h2 {
+          color: #fff;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        h3 {
+          color: #fff;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+    nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding: 57px 0 0 0;
+      gap: 50px;
+      li {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 10px 40px;
+        width: 290px;
+        border-radius: 4px;
+      }
+    }
+  }
+  .pages {
+    margin-left: 370px;
+  }
+}
