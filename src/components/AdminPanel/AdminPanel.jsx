@@ -48,12 +48,12 @@ const AdminPanel = () => {
           className="adminPanel__profil"
         >
           <img
-            src="https://images.pexels.com/photos/2625122/pexels-photo-2625122.jpeg?cs=srgb&dl=pexels-ali-pazani-2625122.jpg&fm=jpg"
+            src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/58a6ac1f695c70ff57eff5ec7c293ff3.jpeg?lk3s=a5d48078&x-expires=1705485600&x-signature=DdjYdqCpJbITzGRWCl6sAQfgR5A%3D"
             alt="profil"
           />
           <div className="adminPanel__profil__text">
-            <h2>Алия Акматова</h2>
-            <h3>Студент УЦА</h3>
+            <h2>Гульзина Кайыпбекова</h2>
+            <h3>Студентка Motion Web</h3>
           </div>
         </div>
         <nav>
