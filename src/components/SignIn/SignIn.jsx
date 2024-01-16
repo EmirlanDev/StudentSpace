@@ -12,38 +12,36 @@ const SignIn = () => {
 
   return (
     <section id="signIn">
-      <div className="containerTwo">
-        <img src={signIn} alt="signIn" />
-        <div className="signIn">
-          <h1>Добро пожаловать</h1>
-          <form>
-            <label>Почта</label>
-            <input type="text" placeholder="Введите свою почту" />
-            <label>Пароль</label>
-            <input
-              type={eye ? "text" : "password"}
-              placeholder="Введите свой пароль"
-            />
-            {eye ? (
-              <IoEyeOutline onClick={() => setEye(false)} className="eye" />
-            ) : (
-              <IoEyeOffOutline onClick={() => setEye(true)} className="eye" />
-            )}
-            <button onClick={() => navigate("/adminPanel")}>Вход</button>
-          </form>
-          <h2>
-            У вас нет аккаунта?{" "}
-            <span onClick={() => navigate("/signUp")}>Зарегистрироваться</span>
-          </h2>
-          <p>Или</p>
-          <div className="btns">
-            <button>
-              <img src={google} alt="google" /> Google
-            </button>
-            <button>
-              <img src={facebook} alt="facebook" /> Fasebook
-            </button>
-          </div>
+      <img className="mainImg" src={signIn} alt="signIn" />
+      <div className="signIn">
+        <h1>Добро пожаловать</h1>
+        <form>
+          <label>Почта</label>
+          <input type="text" placeholder="Введите свою почту" />
+          <label>Пароль</label>
+          <input
+            type={eye ? "text" : "password"}
+            placeholder="Введите свой пароль"
+          />
+          {eye ? (
+            <IoEyeOutline onClick={() => setEye(false)} className="eye" />
+          ) : (
+            <IoEyeOffOutline onClick={() => setEye(true)} className="eye" />
+          )}
+          <button onClick={() => navigate("/adminPanel")}>Вход</button>
+        </form>
+        <h2>
+          У вас нет аккаунта?{" "}
+          <span onClick={() => navigate("/signUp")}>Зарегистрироваться</span>
+        </h2>
+        <p>Или</p>
+        <div className="btns">
+          <button>
+            <img src={google} alt="google" /> Google
+          </button>
+          <button>
+            <img src={facebook} alt="facebook" /> Fasebook
+          </button>
         </div>
       </div>
     </section>

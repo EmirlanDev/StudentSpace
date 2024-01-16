@@ -1,0 +1,48 @@
+import React from "react";
+import { useStateContext } from "./../../../../context/StateContext";
+
+const Detail = () => {
+  const { setNews, setNewsDetail } = useStateContext();
+  return (
+    <section id="detail">
+      <button
+        onClick={() => {
+          setTimeout(() => {
+            setNews(true);
+            setNewsDetail(false);
+          }, 300);
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="20"
+          viewBox="0 0 8 12"
+          fill="none"
+        >
+          <path
+            d="M5.707 0L0 5.707L5.707 11.414L7.121 10L2.828 5.707L7.121 1.414L5.707 0Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+      <h1>Chat GPT сегодня исполнилось 3 года</h1>
+      <h5>12 ноября 2021 года</h5>
+      <img
+        src="https://habrastorage.org/getpro/habr/upload_files/6de/ef1/890/6deef1890756d1d298e9fcec18ef2a61.jpg"
+        alt="news_cart"
+      />
+      <p>
+        Модель подписки и размещение рекламы предоставляют потенциальные
+        источники дохода для проекта. На основе анализа рынка можно сделать
+        вывод, что "Students Space" имеет потенциал привлечь Модель подписки и
+        размещение рекламы предоставляют потенциальные источники дохода для
+        проекта. На основе анализа рынка Модель подписки и размещение рекламы
+        предоставляют потенциальные источники дохода для проекта. На основе
+        анализа рынка можно сделать вывод, что "Students Space" имеет потенциал
+      </p>
+    </section>
+  );
+};
+
+export default Detail;

@@ -1,0 +1,40 @@
+#detail {
+  width: 68vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  button {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  h1 {
+    font-weight: 500;
+    line-height: 34.946px;
+    margin-top: 32px;
+  }
+  h5 {
+    color: rgba(0, 0, 0, 0.42);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17.473px;
+    margin: 12px 0 20px 0;
+  }
+  img {
+    width: 642px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 26px;
+  }
+  p {
+    max-width: 642px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.297px;
+  }
+}
