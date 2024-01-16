@@ -34,6 +34,7 @@
         background: #e5e5e5;
         display: flex;
         gap: 280px;
+
         &__group {
           display: flex;
           align-items: start;
@@ -88,6 +89,49 @@
         margin: 40px 0 35px 0;
         color: #000;
         font-size: 20px;
+      }
+      &__study-scheduleOne {
+        width: 939px;
+        height: 182px;
+        border-radius: 5px;
+        background: #e5e5e5;
+        display: flex;
+        gap: 275px;
+        margin: 40px 0;
+        &__groupTwo {
+          padding: 24px 0 0 24px;
+          &__todayOne {
+            padding: 6px 12px;
+            border-radius: 4px;
+            background: #fff;
+            color: #000;
+            font-size: 14px;
+          }
+          &__roboticsTwo {
+            padding: 6px 12px;
+            border-radius: 4px;
+            background: #fff;
+            color: #000;
+            font-size: 14px;
+          }
+          &__timeThree {
+            padding: 6px 12px;
+            border-radius: 4px;
+            background: #fff;
+            color: #000;
+            font-size: 14px;
+          }
+          &__positionGroup {
+            position: relative;
+            padding: 42px 0 0 0;
+            &__img-group {
+              display: flex;
+              img {
+                position: absolute;
+              }
+            }
+          }
+        }
       }
     }
   }
