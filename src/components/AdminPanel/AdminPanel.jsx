@@ -215,9 +215,7 @@ const AdminPanel = () => {
           <Work />
         ) : newsDetail ? (
           <Detail />
-        ) : (
-          <Profil />
-        )}
+        ) : null}
       </div>
     </section>
   );
