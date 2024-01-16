@@ -6,12 +6,13 @@ export const useStateContext = () => useContext(stateContext);
 const StateContext = ({ children }) => {
   const [profil, setProfil] = useState(false);
   const [news, setNews] = useState(false);
-  const [question, setQuestion] = useState(false);
+  const [question, setQuestion] = useState(true);
   const [networking, setNetworking] = useState(false);
   const [studyRoom, setStudyRoom] = useState(false);
-  const [event, setEvent] = useState(true);
+  const [event, setEvent] = useState(false);
   const [chats, setChats] = useState(false);
   const [work, setWork] = useState(false);
+  const [newsDetail, setNewsDetail] = useState(false);
 
   const values = {
     profil,
@@ -30,6 +31,8 @@ const StateContext = ({ children }) => {
     setChats,
     work,
     setWork,
+    newsDetail,
+    setNewsDetail,
   };
   return (
     <stateContext.Provider value={values}>{children}</stateContext.Provider>

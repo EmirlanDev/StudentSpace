@@ -8,6 +8,7 @@ import StudyRoom from "./StudyRoom/StudyRoom";
 import Event from "./Event/Event";
 import Chats from "./Chats/Chats";
 import Work from "./Work/Work";
+import Detail from "./News/DetailPage/Detail";
 
 const AdminPanel = () => {
   const {
@@ -27,6 +28,8 @@ const AdminPanel = () => {
     setChats,
     work,
     setWork,
+    newsDetail,
+    setNewsDetail,
   } = useStateContext();
 
   console.log(profil);
@@ -44,11 +47,12 @@ const AdminPanel = () => {
             setEvent(false);
             setChats(false);
             setWork(false);
+            setNewsDetail(false);
           }}
           className="adminPanel__profil"
         >
           <img
-            src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/58a6ac1f695c70ff57eff5ec7c293ff3.jpeg?lk3s=a5d48078&x-expires=1705485600&x-signature=DdjYdqCpJbITzGRWCl6sAQfgR5A%3D"
+            src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
             alt="profil"
           />
           <div className="adminPanel__profil__text">
@@ -59,8 +63,8 @@ const AdminPanel = () => {
         <nav>
           <li
             style={{
-              background: news ? "#fff" : "",
-              color: news ? "#1D53C5" : "",
+              background: news || newsDetail ? "#fff" : "",
+              color: news || newsDetail ? "#1D53C5" : "",
             }}
             onClick={() => {
               setProfil(false);
@@ -71,6 +75,7 @@ const AdminPanel = () => {
               setEvent(false);
               setChats(false);
               setWork(false);
+              setNewsDetail(false);
             }}
           >
             Новости
@@ -89,6 +94,7 @@ const AdminPanel = () => {
               setEvent(false);
               setChats(false);
               setWork(false);
+              setNewsDetail(false);
             }}
           >
             Вопросы
@@ -107,6 +113,7 @@ const AdminPanel = () => {
               setEvent(false);
               setChats(false);
               setWork(false);
+              setNewsDetail(false);
             }}
           >
             Нетворкинг
@@ -125,6 +132,7 @@ const AdminPanel = () => {
               setEvent(false);
               setChats(false);
               setWork(false);
+              setNewsDetail(false);
             }}
           >
             Учебные комнаты
@@ -143,6 +151,7 @@ const AdminPanel = () => {
               setEvent(true);
               setChats(false);
               setWork(false);
+              setNewsDetail(false);
             }}
           >
             Мероприятия
@@ -161,6 +170,7 @@ const AdminPanel = () => {
               setEvent(false);
               setChats(true);
               setWork(false);
+              setNewsDetail(false);
             }}
           >
             Чаты
@@ -179,6 +189,7 @@ const AdminPanel = () => {
               setEvent(false);
               setChats(false);
               setWork(true);
+              setNewsDetail(false);
             }}
           >
             Работа
@@ -202,6 +213,8 @@ const AdminPanel = () => {
           <Chats />
         ) : work ? (
           <Work />
+        ) : newsDetail ? (
+          <Detail />
         ) : (
           <Profil />
         )}

@@ -1,5 +1,8 @@
 #signIn {
   display: flex;
+  .mainImg {
+    height: 150vh;
+  }
   .signIn {
     display: flex;
     flex-direction: column;
