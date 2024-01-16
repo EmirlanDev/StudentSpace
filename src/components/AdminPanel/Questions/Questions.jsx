@@ -1,14 +1,62 @@
-import React from "react";
+import { useState } from "react";
+import Creative from "./Creative/Creative";
+import Machine from "./Machine/Machine";
+import Math from "./Math/Math";
+import Programming from "./Programming/Programming";
 
 const Questions = () => {
+  const [math, setMath] = useState(true);
+  const [auto, setAuto] = useState(false);
+  const [prog, setProg] = useState(false);
+  const [mass, setMass] = useState(false);
   return (
     <section id="questions">
       <div className="questions">
         <nav>
-          <button>Математика</button>
-          <button>Машинное обучение</button>
-          <button>Введение в программирование</button>
-          <button>Креативное письмо</button>
+          <button
+            style={{ background: math ? "#E5E5E5" : "" }}
+            onClick={() => {
+              setMath(true);
+              setAuto(false);
+              setProg(false);
+              setMass(false);
+            }}
+          >
+            Математика
+          </button>
+          <button
+            style={{ background: auto ? "#E5E5E5" : "" }}
+            onClick={() => {
+              setMath(false);
+              setAuto(true);
+              setProg(false);
+              setMass(false);
+            }}
+          >
+            Машинное обучение
+          </button>
+          <button
+            style={{ background: prog ? "#E5E5E5" : "" }}
+            onClick={() => {
+              setMath(false);
+              setAuto(false);
+              setProg(true);
+              setMass(false);
+            }}
+          >
+            Введение в программирование
+          </button>
+          <button
+            style={{ background: mass ? "#E5E5E5" : "" }}
+            onClick={() => {
+              setMath(false);
+              setAuto(false);
+              setProg(false);
+              setMass(true);
+            }}
+          >
+            Креативное письмо
+          </button>
         </nav>
         <div className="questions__add-search">
           <button className="questions__add-search__btn">Задать вопрос?</button>
@@ -31,6 +79,17 @@ const Questions = () => {
             </button>
             <input type="search" placeholder="Поиск" />
           </label>
+        </div>
+        <div className="questions__page">
+          {math ? (
+            <Math />
+          ) : auto ? (
+            <Machine />
+          ) : prog ? (
+            <Programming />
+          ) : mass ? (
+            <Creative />
+          ) : null}
         </div>
       </div>
     </section>
