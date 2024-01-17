@@ -13,7 +13,7 @@ const ColumnImg = () => {
         <div className="columnImg">
           <img className="first" src={colunmOne} alt="colunmOne" />
           <div className="columnImg__first">
-            <img src={colunmTwo} alt="colunmTwo" />
+            <img className="bottomFirst" src={colunmTwo} alt="colunmTwo" />
             <div>
               <div className="second">
                 <img src={colunmThree} alt="colunmThree" />
