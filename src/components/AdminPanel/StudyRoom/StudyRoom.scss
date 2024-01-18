@@ -1,4 +1,5 @@
 #study-room {
+  width: 70vw;
   .study-room {
     button{
       border: none;
@@ -31,12 +32,11 @@
         }
       }
       &__study-schedule {
-        width: 939px;
         height: 182px;
         border-radius: 5px;
         background: #e5e5e5;
         display: flex;
-        gap: 280px;
+        justify-content: space-between;
 
         &__group {
           display: flex;
@@ -94,12 +94,12 @@
         font-size: 20px;
       }
       &__study-scheduleOne {
-        width: 939px;
+        // width: 939px;
         height: 182px;
         border-radius: 5px;
         background: #e5e5e5;
         display: flex;
-        gap: 275px;
+        justify-content: space-between;
         margin: 40px 0;
         &__groupTwo {
           padding: 24px 0 0 24px;
