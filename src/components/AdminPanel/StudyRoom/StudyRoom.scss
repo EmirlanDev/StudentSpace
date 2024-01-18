@@ -1,5 +1,8 @@
 #study-room {
   .study-room {
+    button{
+      border: none;
+    }
     &__inform-content {
       padding: 40px 25px;
       &__study-option {
@@ -126,8 +129,8 @@
             padding: 42px 0 0 0;
             &__img-group {
               display: flex;
-              img {
-                position: absolute;
+              img{
+                object-fit: cover;
               }
             }
           }

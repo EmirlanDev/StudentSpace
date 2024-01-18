@@ -2,6 +2,9 @@
   padding: 32px 0 50px 40px;
   justify-content: center;
   width: 65.7vw;
+  h1{
+    width: 110px;
+  }
   .profil {
     &__background {
       width: 100%;
@@ -11,11 +14,11 @@
     }
     &__info {
       padding-left: 24px;
-      margin-top: -5px;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-top: none;
       border-radius: 0 0 10px 10px;
       padding-bottom: 53px;
+      margin-top: -5px;
       &__text-name {
         display: flex;
         align-items: flex-end;
@@ -26,6 +29,7 @@
           border-radius: 50%;
           margin: -69px 37px 0 0;
           object-fit: cover;
+          margin-top: -69px;
         }
         &__edit {
           display: flex;
@@ -80,6 +84,67 @@
           font-size: 16px;
           font-weight: 400;
           line-height: 23.297px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #profil {
+    .profil {
+      &__info {
+        &__descr {
+          p {
+            max-width: 500px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #profil {
+    width: 60vw;
+    padding: 32px 0 50px 30px;
+    .profil {
+      &__info {
+        &__text-name {
+          margin-bottom: 90px;
+          &__edit {
+            display: block;
+            margin-bottom: -60px;
+            h2 {
+            }
+            h3 {
+              margin-bottom: 20px;
+            }
+          }
+        }
+        &__descr {
+          p {
+            max-width: 330px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #profil {
+    width: 99vw;
+    padding: 32px 0 50px 80px;
+    .profil {
+      width: 95%;
+      &__info {
+        &__text-name {
+          margin-bottom: 50px;
+          &__edit {
+            display: flex;
+            margin-bottom: 0;
+          }
         }
       }
     }

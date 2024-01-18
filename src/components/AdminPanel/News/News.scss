@@ -40,3 +40,75 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  #news {
+    .news {
+      &__carts {
+        &__cart {
+          img {
+            width: 250px;
+          }
+          &__text {
+            h2 {
+              font-size: 22px;
+            }
+            p {
+              font-size: 13px;
+              max-width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #news {
+    width: 60vw;
+    .news {
+      &__carts {
+        &__cart {
+          gap: 15px;
+          img{
+            height: 300px;
+          }
+          &__text {
+            h2 {
+              font-size: 18px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #news {
+    padding: 32px 0 50px 80px;
+    width: 99vw;
+    .news {
+      &__carts {
+        &__cart {
+          gap: 40px;
+          img {
+            width: 357px;
+          }
+          &__text {
+            h2 {
+              font-size: 24px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

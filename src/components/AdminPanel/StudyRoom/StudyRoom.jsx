@@ -7,7 +7,7 @@ const StudyRoom = () => {
         <div className="study-room">
           <div className="study-room__inform-content">
             <div className="study-room__inform-content__study-option">
-              <div className="study-room__inform-content__study-option__oflain-study">
+              <button className="study-room__inform-content__study-option__oflain-study">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -24,8 +24,8 @@ const StudyRoom = () => {
                   />
                 </svg>
                 <h1>Индивидуальная учебная комната</h1>
-              </div>
-              <div className="study-room__inform-content__study-option__onlain-study">
+              </button>
+              <button className="study-room__inform-content__study-option__onlain-study">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -40,7 +40,7 @@ const StudyRoom = () => {
                   />
                 </svg>
                 <h1>Обучение в прямом эфире</h1>
-              </div>
+              </button>
             </div>
             <div className="study-room__inform-content__study-schedule">
               <div className="study-room__inform-content__study-schedule__group">
@@ -61,7 +61,7 @@ const StudyRoom = () => {
                 </div>
               </div>
             </div>
-            <div className="study-room__inform-content__group-study">
+            <button  className="study-room__inform-content__group-study">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -78,7 +78,7 @@ const StudyRoom = () => {
                 />
               </svg>
               <h1>Групповые учебные комнаты</h1>
-            </div>
+            </button>
             <div className="study-room__inform-content__study-scheduleOne">
               <div className="study-room__inform-content__study-scheduleOne__groupTwo">
                 <div style={{ display: "flex", gap: "15px" }}>
@@ -96,7 +96,7 @@ const StudyRoom = () => {
                   <div className="study-room__inform-content__study-scheduleOne__groupTwo__positionGroup__img-group">
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -108,7 +108,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -119,7 +119,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -130,7 +130,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -141,7 +141,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -152,7 +152,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -213,7 +213,7 @@ const StudyRoom = () => {
                   <div className="study-room__inform-content__study-scheduleOne__groupTwo__positionGroup__img-group">
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -225,7 +225,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -236,7 +236,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -247,7 +247,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -258,7 +258,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",
@@ -269,7 +269,7 @@ const StudyRoom = () => {
                     />
                     <img
                       style={{
-                        width: "50px",
+                        width: "45px",
                         height: "45px",
                         borderRadius: "50%",
                         position: "absolute",

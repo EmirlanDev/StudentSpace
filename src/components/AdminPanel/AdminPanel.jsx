@@ -30,13 +30,15 @@ const AdminPanel = () => {
     setWork,
     newsDetail,
     setNewsDetail,
+    menu,
+    setMenu,
   } = useStateContext();
-
-  console.log(profil);
 
   return (
     <section id="adminPanel">
-      <div className="adminPanel">
+      <div
+        style={{ transform: menu ? "translateX(0)" : "" }}
+        className="adminPanel">
         <div
           onClick={() => {
             setProfil(true);
@@ -48,9 +50,9 @@ const AdminPanel = () => {
             setChats(false);
             setWork(false);
             setNewsDetail(false);
+            setMenu(false);
           }}
-          className="adminPanel__profil"
-        >
+          className="adminPanel__profil">
           <img
             src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
             alt="profil"
@@ -76,8 +78,8 @@ const AdminPanel = () => {
               setChats(false);
               setWork(false);
               setNewsDetail(false);
-            }}
-          >
+              setMenu(false);
+            }}>
             Новости
           </li>
           <li
@@ -95,8 +97,8 @@ const AdminPanel = () => {
               setChats(false);
               setWork(false);
               setNewsDetail(false);
-            }}
-          >
+              setMenu(false);
+            }}>
             Вопросы
           </li>
           <li
@@ -114,8 +116,8 @@ const AdminPanel = () => {
               setChats(false);
               setWork(false);
               setNewsDetail(false);
-            }}
-          >
+              setMenu(false);
+            }}>
             Нетворкинг
           </li>
           <li
@@ -133,8 +135,8 @@ const AdminPanel = () => {
               setChats(false);
               setWork(false);
               setNewsDetail(false);
-            }}
-          >
+              setMenu(false);
+            }}>
             Учебные комнаты
           </li>
           <li
@@ -152,8 +154,8 @@ const AdminPanel = () => {
               setChats(false);
               setWork(false);
               setNewsDetail(false);
-            }}
-          >
+              setMenu(false);
+            }}>
             Мероприятия
           </li>
           <li
@@ -171,8 +173,8 @@ const AdminPanel = () => {
               setChats(true);
               setWork(false);
               setNewsDetail(false);
-            }}
-          >
+              setMenu(false);
+            }}>
             Чаты
           </li>
           <li
@@ -190,13 +192,53 @@ const AdminPanel = () => {
               setChats(false);
               setWork(true);
               setNewsDetail(false);
-            }}
-          >
+              setMenu(false);
+            }}>
             Работа
           </li>
         </nav>
       </div>
+      <div
+      onClick={()=> setMenu(false)}
+        style={{ opacity: menu ? "1" : "0", zIndex: menu ? "" : "-100" }}
+        className="bg"></div>
       <div className="pages">
+        <svg
+          onClick={() => setMenu(true)}
+          className="pages__menu"
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 35 35"
+          fill="none">
+          <circle
+            cx="17.4998"
+            cy="17.5"
+            r="1.45833"
+            transform="rotate(-90 17.4998 17.5)"
+            stroke="#33363F"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <circle
+            cx="17.4998"
+            cy="26.25"
+            r="1.45833"
+            transform="rotate(-90 17.4998 26.25)"
+            stroke="#33363F"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <circle
+            cx="17.4998"
+            cy="8.75004"
+            r="1.45833"
+            transform="rotate(-90 17.4998 8.75004)"
+            stroke="#33363F"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
         {profil ? (
           <Profil />
         ) : news ? (
