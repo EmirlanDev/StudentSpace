@@ -1,12 +1,15 @@
 #work {
-  width: 50vw;
+  width: 80vw;
   .work {
+    padding: 32px 0 0 80px;
     &__inputGroup {
       display: flex;
       gap: 20px;
-      padding: 38px 0 0 20px;
+      //   padding: 0 30px;
       input {
-        padding: 12px 595px 12px 40px;
+        width: 70vw;
+        height: 40px;
+        padding: 0 0 0 40px;
         border-radius: 4px;
         background: #eee;
         border: none;
@@ -23,7 +26,7 @@
     &__jobInform {
       display: flex;
       gap: 20px;
-      padding: 20px 0 0 20px;
+      padding: 20px 0 0 0;
       p {
         color: #000;
         font-size: 16px;
@@ -101,6 +104,19 @@
       border: none;
       color: #fff;
       font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #work {
+    width: 62vw;
+    .work {
+      &__inputGroup {
+        input {
+          width: 40vw;
+        }
+      }
     }
   }
 }

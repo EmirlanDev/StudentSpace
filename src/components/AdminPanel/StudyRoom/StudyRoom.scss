@@ -1,11 +1,11 @@
 #study-room {
   width: 70vw;
   .study-room {
-    button{
+    button {
       border: none;
     }
     &__inform-content {
-      padding: 40px 25px;
+      padding: 40px 0px;
       &__study-option {
         display: flex;
         gap: 40px;
@@ -129,10 +129,85 @@
             padding: 42px 0 0 0;
             &__img-group {
               display: flex;
-              img{
+              img {
                 object-fit: cover;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #study-room {
+    width: 65vw;
+    .study-room {
+      button {
+        border: none;
+      }
+      &__inform-content {
+        &__study-option {
+          &__oflain-study {
+            font-size: 18px;
+            zoom: 70%;
+          }
+          &__onlain-study {
+            font-size: 18px;
+            zoom: 70%;
+          }
+        }
+        &__study-schedule {
+          zoom: 80%;
+        }
+        &__group-study {
+          zoom: 80%;
+        }
+        &__study-scheduleOne {
+          zoom: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #study-room {
+    width: 90vw;
+    .study-room {
+      padding: 32px 0 0 80px;
+      &__inform-content {
+        &__study-option {
+          &__oflain-study {
+            font-size: 17.5px;
+          }
+          &__onlain-study {
+            font-size: 17.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+  #study-room {
+    width: 90vw;
+    .study-room {
+      padding: 32px 0 0 1px;
+      width: 100%;
+
+      &__inform-content {
+        &__study-option {
+          &__oflain-study {
+            font-size: 17.5px;
+          }
+          &__onlain-study {
+            font-size: 17.5px;
           }
         }
       }

@@ -49,3 +49,12 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  #chat {
+    width: 65vw;
+    .chat {
+      padding: 32px 0 0 80px;
+    }
+  }
+}
