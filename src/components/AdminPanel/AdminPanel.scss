@@ -9,6 +9,12 @@
     inset: 0;
     z-index: 200;
     transition: 0.5s;
+    &__back {
+      position: absolute;
+      top: 20px;
+      left: 25px;
+      display: none;
+    }
     &::-webkit-scrollbar {
       background-color: #1d53c5;
       width: 8px;
@@ -25,10 +31,10 @@
       border-bottom: 1px solid #fff;
       cursor: pointer;
       img {
-        height: 84px;
         object-fit: cover;
         border-radius: 50%;
-        width: 42.87%;
+        width: 133px;
+        height: 84px;
       }
       &__text {
         h2 {
@@ -88,10 +94,49 @@
   }
 }
 
+@media (max-width: 1200px) {
+  #adminPanel {
+    .adminPanel {
+      width: 320px;
+      &__profil {
+        display: block;
+        img {
+          width: 84px;
+        }
+      }
+      nav {
+        li {
+          padding: 10px 20px;
+          width: 230px;
+        }
+      }
+    }
+    .pages {
+      margin-left: 320px;
+    }
+  }
+}
+
 @media (max-width: 992px) {
   #adminPanel {
     .adminPanel {
       transform: translateX(-100%);
+      width: 370px;
+      &__back {
+        display: block;
+      }
+      &__profil {
+        display: flex;
+        img {
+          width: 133px;
+        }
+      }
+      nav {
+        li {
+          padding: 10px 40px;
+          width: 290px;
+        }
+      }
     }
     .pages {
       margin-left: 0;
@@ -104,6 +149,18 @@
 
 @media (max-width: 576px) {
   #adminPanel {
+    .title {
+      text-align: end;
+    }
+    .adminPanel {
+      max-width: 100%;
+      width: 100%;
+      &__profil {
+        img {
+          width: 84px;
+        }
+      }
+    }
     .pages {
       &__menu {
         position: absolute;
@@ -114,15 +171,23 @@
 
 @media (max-width: 452px) {
   #adminPanel {
+    .adminPanel {
+      &__profil {
+        img {
+          max-width: 84px;
+          width: 100%;
+        }
+      }
+    }
     .pages {
       .title {
         margin-bottom: 35px;
         font-size: 20px;
       }
-      svg {
-        width: 30px;
-        height: 30px;
-      }
+      // svg {
+      //   width: 30px;
+      //   height: 30px;
+      // }
       &__menu {
         position: absolute;
       }

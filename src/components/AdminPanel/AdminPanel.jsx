@@ -39,6 +39,19 @@ const AdminPanel = () => {
       <div
         style={{ transform: menu ? "translateX(0)" : "" }}
         className="adminPanel">
+        <svg
+          onClick={() => setMenu(false)}
+          className="adminPanel__back"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="20"
+          viewBox="0 0 8 12"
+          fill="none">
+          <path
+            d="M5.707 0L0 5.707L5.707 11.414L7.121 10L2.828 5.707L7.121 1.414L5.707 0Z"
+            fill="white"
+          />
+        </svg>
         <div
           onClick={() => {
             setProfil(true);
@@ -199,11 +212,12 @@ const AdminPanel = () => {
         </nav>
       </div>
       <div
-      onClick={()=> setMenu(false)}
+        onClick={() => setMenu(false)}
         style={{ opacity: menu ? "1" : "0", zIndex: menu ? "" : "-100" }}
         className="bg"></div>
       <div className="pages">
         <svg
+          style={{ display: newsDetail ? "none" : "" }}
           onClick={() => setMenu(true)}
           className="pages__menu"
           xmlns="http://www.w3.org/2000/svg"

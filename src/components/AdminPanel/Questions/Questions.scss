@@ -1,10 +1,14 @@
 #questions {
   padding: 32px 0 0 40px;
   width: 60vw;
+  h1 {
+    display: none;
+  }
   .questions {
     nav {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       padding-bottom: 40px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.5);
       button {
@@ -19,16 +23,16 @@
         font-weight: 400;
         background: transparent;
         &:first-child {
-          max-width: 146px;
+          width: 146px;
         }
         &:nth-child(2) {
-          max-width: 134px;
+          width: 134px;
         }
         &:nth-child(3) {
-          max-width: 204px;
+          width: 204px;
         }
         &:last-child {
-          max-width: 143px;
+          width: 143px;
         }
       }
     }
@@ -99,8 +103,84 @@
     width: 93vw;
     .questions {
       nav {
+        justify-content: start;
+        gap: 10px;
         button {
           padding: 10px 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #questions {
+    .questions {
+      nav {
+        justify-content: space-between;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  #questions {
+    .questions {
+      &__add-search {
+        flex-direction: column;
+        gap: 15px;
+        &__btn {
+          width: 175px;
+          padding: 10px;
+        }
+        label {
+          input {
+            width: 92%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #questions {
+    padding: 32px 20px 35px;
+    width: 99vw;
+    h1 {
+      display: block;
+    }
+    .questions {
+      nav {
+        justify-content: space-between;
+
+        button {
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #questions {
+    .questions {
+      nav {
+        flex-direction: column;
+        button {
+          &:first-child {
+            width: 100%;
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+          &:nth-child(3) {
+            width: 100%;
+          }
+          &:last-child {
+            width: 100%;
+          }
         }
       }
     }

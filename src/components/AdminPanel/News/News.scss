@@ -90,8 +90,8 @@
 
 @media (max-width: 992px) {
   #news {
-    padding: 32px 0 50px 80px;
-    width: 99vw;
+    padding: 32px 30px 50px 80px;
+    width: 97vw;
     .news {
       &__carts {
         &__cart {
@@ -107,6 +107,111 @@
             p {
               font-size: 16px;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  #news {
+    padding: 32px 30px 50px 80px;
+    width: 97vw;
+    .news {
+      &__carts {
+        &__cart {
+          gap: 15px;
+          img {
+            width: 260px;
+            height: 206px;
+          }
+          &__text {
+            h2 {
+              font-size: 18px;
+            }
+            p {
+              font-size: 12px;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 703px) {
+  #news {
+    .news {
+      &__carts {
+        &__cart {
+          flex-direction: column;
+          border-radius: 10px;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          img {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px 10px 0 0;
+          }
+          &__text {
+            padding: 0 20px 10px;
+            h2 {
+              font-size: 18px;
+            }
+            p {
+              font-size: 12px;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  #news {
+    .news {
+      &__carts {
+        &__cart {
+          &__text {
+            h2 {
+              line-height: 26px;
+            }
+            p {
+              line-height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #news {
+    padding: 28px 20px 35px;
+    width: 99vw;
+    .news {
+      &__carts {
+        &__cart {
+          img {
+            height: 190px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #news {
+    .news {
+      &__carts {
+        &__cart {
+          &__text {
+            padding: 0 10px 10px;
           }
         }
       }

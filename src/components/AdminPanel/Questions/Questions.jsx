@@ -12,6 +12,7 @@ const Questions = () => {
   return (
     <section id="questions">
       <div className="questions">
+        <h1 className="title">Вопросы</h1>
         <nav>
           <button
             style={{ background: math ? "#E5E5E5" : "" }}
