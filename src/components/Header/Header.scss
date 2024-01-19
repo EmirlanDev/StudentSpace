@@ -20,7 +20,7 @@ header {
         font-size: 16px;
         font-weight: 500;
       }
-      button {
+      .signIn {
         display: flex;
         padding: 8px 22px;
         justify-content: center;
@@ -33,6 +33,73 @@ header {
         font-weight: 500;
         cursor: pointer;
       }
+      .burger {
+        border: none;
+        display: none;
+        background: transparent;
+      }
+    }
+  }
+  .menu {
+    position: absolute;
+    width: 100%;
+    display: none;
+    background-color: #000;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px 0;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    a {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    .header {
+      margin: 28px 0 74px 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    .header {
+      margin: 28px 0 44px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .header {
+      h1{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    .header {
+      margin: 28px 0;
+      nav {
+        gap: 20px;
+        a {
+          display: none;
+        }
+        .burger {
+          display: flex;
+        }
+      }
+    }
+    .menu {
+      display: flex;
     }
   }
 }
