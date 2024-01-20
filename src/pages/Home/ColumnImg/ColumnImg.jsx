@@ -14,7 +14,7 @@ const ColumnImg = () => {
           <img className="first" src={colunmOne} alt="colunmOne" />
           <div className="columnImg__first">
             <img className="bottomFirst" src={colunmTwo} alt="colunmTwo" />
-            <div>
+            <div className="columnImg__first__groupImg">
               <div className="second">
                 <img src={colunmThree} alt="colunmThree" />
                 <img src={colunmFour} alt="colunmFour" />
