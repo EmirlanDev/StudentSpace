@@ -9,6 +9,7 @@ import Event from "./Event/Event";
 import Chats from "./Chats/Chats";
 import Work from "./Work/Work";
 import Detail from "./News/DetailPage/Detail";
+import Board from "./Board/Board";
 
 const AdminPanel = () => {
   const {
@@ -32,13 +33,16 @@ const AdminPanel = () => {
     setNewsDetail,
     menu,
     setMenu,
+    board,
+    setBoard,
   } = useStateContext();
 
   return (
     <section id="adminPanel">
       <div
         style={{ transform: menu ? "translateX(0)" : "" }}
-        className="adminPanel">
+        className="adminPanel"
+      >
         <svg
           onClick={() => setMenu(false)}
           className="adminPanel__back"
@@ -46,7 +50,8 @@ const AdminPanel = () => {
           width="16"
           height="20"
           viewBox="0 0 8 12"
-          fill="none">
+          fill="none"
+        >
           <path
             d="M5.707 0L0 5.707L5.707 11.414L7.121 10L2.828 5.707L7.121 1.414L5.707 0Z"
             fill="white"
@@ -64,8 +69,10 @@ const AdminPanel = () => {
             setWork(false);
             setNewsDetail(false);
             setMenu(false);
+            setBoard(false);
           }}
-          className="adminPanel__profil">
+          className="adminPanel__profil"
+        >
           <img
             src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
             alt="profil"
@@ -92,7 +99,9 @@ const AdminPanel = () => {
               setWork(false);
               setNewsDetail(false);
               setMenu(false);
-            }}>
+              setBoard(false);
+            }}
+          >
             Новости
           </li>
           <li
@@ -111,7 +120,9 @@ const AdminPanel = () => {
               setWork(false);
               setNewsDetail(false);
               setMenu(false);
-            }}>
+              setBoard(false);
+            }}
+          >
             Вопросы
           </li>
           <li
@@ -130,7 +141,9 @@ const AdminPanel = () => {
               setWork(false);
               setNewsDetail(false);
               setMenu(false);
-            }}>
+              setBoard(false);
+            }}
+          >
             Нетворкинг
           </li>
           <li
@@ -149,7 +162,9 @@ const AdminPanel = () => {
               setWork(false);
               setNewsDetail(false);
               setMenu(false);
-            }}>
+              setBoard(false);
+            }}
+          >
             Учебные комнаты
           </li>
           <li
@@ -168,7 +183,9 @@ const AdminPanel = () => {
               setWork(false);
               setNewsDetail(false);
               setMenu(false);
-            }}>
+              setBoard(false);
+            }}
+          >
             Мероприятия
           </li>
           <li
@@ -187,7 +204,9 @@ const AdminPanel = () => {
               setWork(false);
               setNewsDetail(false);
               setMenu(false);
-            }}>
+              setBoard(false);
+            }}
+          >
             Чаты
           </li>
           <li
@@ -206,7 +225,9 @@ const AdminPanel = () => {
               setWork(true);
               setNewsDetail(false);
               setMenu(false);
-            }}>
+              setBoard(false);
+            }}
+          >
             Работа
           </li>
         </nav>
@@ -214,7 +235,8 @@ const AdminPanel = () => {
       <div
         onClick={() => setMenu(false)}
         style={{ opacity: menu ? "1" : "0", zIndex: menu ? "" : "-100" }}
-        className="bg"></div>
+        className="bg"
+      ></div>
       <div className="pages">
         <svg
           style={{ display: newsDetail ? "none" : "" }}
@@ -224,7 +246,8 @@ const AdminPanel = () => {
           width="35"
           height="35"
           viewBox="0 0 35 35"
-          fill="none">
+          fill="none"
+        >
           <circle
             cx="17.4998"
             cy="17.5"
@@ -271,6 +294,8 @@ const AdminPanel = () => {
           <Work />
         ) : newsDetail ? (
           <Detail />
+        ) : board ? (
+          <Board />
         ) : null}
       </div>
     </section>

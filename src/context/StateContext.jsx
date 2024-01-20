@@ -14,6 +14,7 @@ const StateContext = ({ children }) => {
   const [work, setWork] = useState(false);
   const [newsDetail, setNewsDetail] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [board, setBoard] = useState(false);
 
   const values = {
     profil,
@@ -36,6 +37,8 @@ const StateContext = ({ children }) => {
     setNewsDetail,
     menu,
     setMenu,
+    board,
+    setBoard,
   };
   return (
     <stateContext.Provider value={values}>{children}</stateContext.Provider>
