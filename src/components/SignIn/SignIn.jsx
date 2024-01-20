@@ -5,10 +5,13 @@ import { IoEyeOffOutline } from "react-icons/io5";
 import google from "../../images/google.svg";
 import facebook from "../../images/facebook.svg";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../../context/AuthContext";
 
 const SignIn = () => {
   const [eye, setEye] = useState(false);
   const navigate = useNavigate();
+
+  const { authWithGoogle } = useAuthContext();
 
   return (
     <section id="signIn">
@@ -36,7 +39,14 @@ const SignIn = () => {
         </h2>
         <p>Или</p>
         <div className="btns">
-          <button>
+          <button
+            onClick={() => {
+              authWithGoogle();
+              setTimeout(() => {
+                navigate("/adminPanel");
+              }, 5000);
+            }}
+          >
             <img src={google} alt="google" /> Google
           </button>
           <button>

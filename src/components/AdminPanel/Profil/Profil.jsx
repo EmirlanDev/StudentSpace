@@ -1,6 +1,8 @@
 import React from "react";
+import { useAuthContext } from "./../../../context/AuthContext";
 
 const Profil = () => {
+  const { user } = useAuthContext();
   return (
     <section id="profil">
       <h1 className="title">Профиль</h1>
@@ -13,13 +15,17 @@ const Profil = () => {
         <div className="profil__info">
           <div className="profil__info__text-name">
             <img
-              src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
+              src={
+                user
+                  ? user.photoURL
+                  : "https://cdn-icons-png.freepik.com/512/3177/3177440.png"
+              }
               alt="profil"
               className="profilImg"
             />
             <div className="profil__info__text-name__edit">
               <div>
-                <h2>Гульзина Кайыпбек кызы</h2>
+                <h2>{user ? user.displayName : "Ваше Имя "}</h2>
                 <h3>Front-end developer</h3>
               </div>
               <button>Редактировать</button>

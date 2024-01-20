@@ -10,6 +10,7 @@ import Chats from "./Chats/Chats";
 import Work from "./Work/Work";
 import Detail from "./News/DetailPage/Detail";
 import Board from "./Board/Board";
+import { useAuthContext } from "./../../context/AuthContext";
 
 const AdminPanel = () => {
   const {
@@ -36,6 +37,8 @@ const AdminPanel = () => {
     board,
     setBoard,
   } = useStateContext();
+
+  const { user } = useAuthContext();
 
   return (
     <section id="adminPanel">
@@ -74,12 +77,16 @@ const AdminPanel = () => {
           className="adminPanel__profil"
         >
           <img
-            src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
+            src={
+              user
+                ? user.photoURL
+                : "https://cdn-icons-png.freepik.com/512/3177/3177440.png"
+            }
             alt="profil"
           />
           <div className="adminPanel__profil__text">
-            <h2>Гульзина Кайыпбек кызы</h2>
-            <h3>Студентка Motion Web</h3>
+            <h2>{user ? user.displayName : "Ваше имя"}</h2>
+            <h3>Студент</h3>
           </div>
         </div>
         <nav>

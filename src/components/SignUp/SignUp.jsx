@@ -4,17 +4,20 @@ import facebook from "../../images/facebook.svg";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "./../../context/AuthContext";
 
 const SignUp = () => {
   const [eye, setEye] = useState(false);
   const [checkBox, setCheckBox] = useState(false);
   const navigate = useNavigate();
 
+  const { authWithGoogle } = useAuthContext();
+
   return (
     <section id="signUp">
       <div className="containerTwo">
         <div className="signUp">
-          <form>
+          <div className="form">
             <h1>Регистрация</h1>
             <label>Имя</label>
             <input type="text" placeholder="Введите свое имя" />
@@ -60,14 +63,21 @@ const SignUp = () => {
             </button>
             <p>Или</p>
             <div className="btns">
-              <button>
+              <button
+                onClick={() => {
+                  authWithGoogle();
+                  setTimeout(() => {
+                    navigate("/adminPanel");
+                  }, 5000);
+                }}
+              >
                 <img src={google} alt="google" /> Google
               </button>
               <button>
                 <img src={facebook} alt="facebook" /> Fasebook
               </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
