@@ -33,6 +33,12 @@
       &__person {
         display: flex;
         gap: 18px;
+        &__logo{
+          img{
+            border-radius: 50% ;
+            object-fit: cover;
+          }
+        }
 
         h2 {
           color: #000;

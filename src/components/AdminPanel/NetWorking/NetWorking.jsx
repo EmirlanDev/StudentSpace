@@ -16,7 +16,7 @@ const NetWorking = () => {
         <div className="netWorking__carts">
           <div className="netWorking__carts__cart">
             <img
-              src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
+              src="https://nypost.com/wp-content/uploads/sites/2/2020/12/yael-most-beautiful-video.jpg?quality=75&strip=all"
               alt="person"
             />
             <h2>Гульзина Кайыпбек кызы</h2>
@@ -25,7 +25,7 @@ const NetWorking = () => {
           </div>
           <div className="netWorking__carts__cart">
             <img
-              src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
+              src="https://nypost.com/wp-content/uploads/sites/2/2020/12/yael-most-beautiful-video.jpg?quality=75&strip=all"
               alt="person"
             />
             <h2>Гульзина Кайыпбек кызы</h2>
@@ -34,7 +34,7 @@ const NetWorking = () => {
           </div>
           <div className="netWorking__carts__cart">
             <img
-              src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
+              src="https://nypost.com/wp-content/uploads/sites/2/2020/12/yael-most-beautiful-video.jpg?quality=75&strip=all"
               alt="person"
             />
             <h2>Гульзина Кайыпбек кызы</h2>
@@ -43,7 +43,7 @@ const NetWorking = () => {
           </div>
           <div className="netWorking__carts__cart">
             <img
-              src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
+              src="https://nypost.com/wp-content/uploads/sites/2/2020/12/yael-most-beautiful-video.jpg?quality=75&strip=all"
               alt="person"
             />
             <h2>Гульзина Кайыпбек кызы</h2>

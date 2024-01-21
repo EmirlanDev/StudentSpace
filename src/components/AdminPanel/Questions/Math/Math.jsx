@@ -8,7 +8,7 @@ const Math = () => {
           <div className="maths__cart__title">
             <div className="maths__cart__title__profil">
               <img
-                src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
+                src="https://nypost.com/wp-content/uploads/sites/2/2020/12/yael-most-beautiful-video.jpg?quality=75&strip=all"
                 alt="profil"
               />
               <div className="maths__cart__title__profil__text">
@@ -22,8 +22,7 @@ const Math = () => {
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                fill="none"
-              >
+                fill="none">
                 <path
                   d="M16.192 6.34399L11.949 10.586L7.70697 6.34399L6.29297 7.75799L10.535 12L6.29297 16.242L7.70697 17.656L11.949 13.414L16.192 17.656L17.606 16.242L13.364 12L17.606 7.75799L16.192 6.34399Z"
                   fill="black"
@@ -42,8 +41,7 @@ const Math = () => {
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
-                  fill="none"
-                >
+                  fill="none">
                   <path
                     d="M1.45965 7.0218C1.44288 7.32149 1.61058 7.60076 1.88329 7.72618L7.35496 10.236L9.86475 15.7069C9.98434 15.9665 10.2439 16.132 10.5276 16.132L10.5691 16.1306C10.7155 16.1224 10.8559 16.0702 10.9722 15.981C11.0885 15.8918 11.1752 15.7696 11.221 15.6303L15.3007 3.21118C15.386 2.95013 15.3175 2.66211 15.1235 2.46743C14.9295 2.27274 14.6423 2.20638 14.3798 2.29024L1.95986 6.36993C1.82062 6.41572 1.69842 6.50241 1.60919 6.6187C1.51996 6.73498 1.46785 6.87546 1.45965 7.0218ZM13.4646 4.12628L10.4153 13.4086L8.56756 9.38211C8.49489 9.22337 8.36756 9.09604 8.20882 9.02336L4.1809 7.17565L13.4646 4.12628Z"
                     fill="#424242"
@@ -60,7 +58,7 @@ const Math = () => {
           <div className="maths__cart__title">
             <div className="maths__cart__title__profil">
               <img
-                src="https://instagram.ffru9-1.fna.fbcdn.net/v/t39.30808-6/357399862_18010812205738272_7159973620911885097_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyIn0&_nc_ht=instagram.ffru9-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=ndjitXZtpJAAX8CQ4mw&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzEzODg0MzY3MzQyMDQyOTIyNA%3D%3D.2-ccb7-5&oh=00_AfDSG_m6ubVgnXsa2jCVmHLZfa_FsmuIuANPkmU_usO9Jg&oe=65AA2C5B&_nc_sid=ee9879"
+                src="https://nypost.com/wp-content/uploads/sites/2/2020/12/yael-most-beautiful-video.jpg?quality=75&strip=all"
                 alt="profil"
               />
               <div className="maths__cart__title__profil__text">
@@ -74,8 +72,7 @@ const Math = () => {
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                fill="none"
-              >
+                fill="none">
                 <path
                   d="M16.192 6.34399L11.949 10.586L7.70697 6.34399L6.29297 7.75799L10.535 12L6.29297 16.242L7.70697 17.656L11.949 13.414L16.192 17.656L17.606 16.242L13.364 12L17.606 7.75799L16.192 6.34399Z"
                   fill="black"
@@ -94,8 +91,7 @@ const Math = () => {
                   width="18"
                   height="18"
                   viewBox="0 0 18 18"
-                  fill="none"
-                >
+                  fill="none">
                   <path
                     d="M1.45965 7.0218C1.44288 7.32149 1.61058 7.60076 1.88329 7.72618L7.35496 10.236L9.86475 15.7069C9.98434 15.9665 10.2439 16.132 10.5276 16.132L10.5691 16.1306C10.7155 16.1224 10.8559 16.0702 10.9722 15.981C11.0885 15.8918 11.1752 15.7696 11.221 15.6303L15.3007 3.21118C15.386 2.95013 15.3175 2.66211 15.1235 2.46743C14.9295 2.27274 14.6423 2.20638 14.3798 2.29024L1.95986 6.36993C1.82062 6.41572 1.69842 6.50241 1.60919 6.6187C1.51996 6.73498 1.46785 6.87546 1.45965 7.0218ZM13.4646 4.12628L10.4153 13.4086L8.56756 9.38211C8.49489 9.22337 8.36756 9.09604 8.20882 9.02336L4.1809 7.17565L13.4646 4.12628Z"
                     fill="#424242"

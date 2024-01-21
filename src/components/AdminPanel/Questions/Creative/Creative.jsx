@@ -8,7 +8,7 @@ const Creative = () => {
           <div className="creatives__cart__title">
             <div className="creatives__cart__title__profil">
               <img
-                src="https://avatars.githubusercontent.com/u/147941140?v=4"
+                src="https://nypost.com/wp-content/uploads/sites/2/2020/12/yael-most-beautiful-video.jpg?quality=75&strip=all"
                 alt="profil"
               />
               <div className="creatives__cart__title__profil__text">
