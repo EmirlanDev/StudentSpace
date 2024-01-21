@@ -6,6 +6,8 @@ const Profil = () => {
     useAuthContext();
   const { setModal } = useStateContext();
 
+  console.log(user);
+
   return (
     <section id="profil">
       <h1 className="title">Профиль</h1>
@@ -29,8 +31,10 @@ const Profil = () => {
             <div className="profil__info__text-name__edit">
               <div>
                 <h2>
-                  {user && user.displayName.length > 20
+                  {user && user.displayName.length > 30
                     ? `${name} ${lastName}`
+                    : user && user.displayName.length < 20
+                    ? user.displayName
                     : "Ваше Имя"}
                 </h2>
                 <h3>
@@ -73,7 +77,7 @@ const Profil = () => {
             <p>
               {user && user.displayName.length > 20
                 ? updateDate
-                : "Ваша дата рождения"}{" "}
+                : "Ваша дата рождения"}
             </p>
           </div>
           <div className="profil__info__mob">

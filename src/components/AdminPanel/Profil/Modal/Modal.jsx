@@ -21,7 +21,9 @@ const Modal = () => {
   function Img(e) {
     const file = e.target.files[0];
     if (file) {
-      setValues({ ...values, image: URL.createObjectURL(file) });
+      file
+        ? setValues(user.photoURL)
+        : setValues({ ...values, image: URL.createObjectURL(file) });
     }
   }
 

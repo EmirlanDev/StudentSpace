@@ -90,9 +90,11 @@ const AdminPanel = () => {
           />
           <div className="adminPanel__profil__text">
             <h2>
-              {user && user.displayName.length > 20
+              {user && user.displayName.length > 30
                 ? `${name} ${lastName}`
-                : "Ваше имя"}
+                : user && user.displayName.length < 20
+                ? user.displayName
+                : "Ваше Имя"}
             </h2>
             <h3>
               Студент{" "}

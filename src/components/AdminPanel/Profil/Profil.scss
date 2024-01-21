@@ -183,11 +183,6 @@
             width: 140px;
             height: 140px;
           }
-          &__edit {
-            button {
-              margin-left: 52%;
-            }
-          }
         }
         p {
           font-size: 13px;
@@ -266,7 +261,6 @@
   #profil {
     .profil {
       &__info {
-        // padding: 0 10px 15px;
         &__text-name {
           img {
             margin: 10px 28px 0 0;

@@ -39,7 +39,6 @@ const SignUp = () => {
   let first = error.indexOf("/");
   let last = error.lastIndexOf(")");
 
-
   return (
     <section id="signUp">
       <div className="containerTwo">
@@ -108,9 +107,7 @@ const SignUp = () => {
             <button
               onClick={() => {
                 register();
-                setTimeout(() => {
-                  user ? navigate("/adminPanel") : navigate("");
-                }, 2000);
+                user ? navigate("/adminPanel") : navigate("");
               }}
               className="regist"
             >
@@ -121,9 +118,7 @@ const SignUp = () => {
               <button
                 onClick={() => {
                   authWithGoogle();
-                  setTimeout(() => {
-                    navigate("/adminPanel");
-                  }, 8000);
+                  user ? navigate("/adminPanel") : navigate("");
                 }}
               >
                 <img src={google} alt="google" /> Google

@@ -66,28 +66,32 @@ const AuthContext = ({ children }) => {
   let de = state.user ? state.user.displayName.indexOf("<") : "";
   let lde = state.user ? state.user.displayName.indexOf(">") : "";
 
-  let name = state.user ? state.user.displayName.slice(n + 1, l - 1) : "";
-  let lastName = state.user ? state.user.displayName.slice(l + 1, p - 1) : "";
+  let name = state.user
+    ? state.user.displayName.slice(n + 1, l - 1)[0].toUpperCase() +
+      state.user.displayName
+        .slice(n + 1, l - 1)
+        .slice(1)
+        .toLowerCase()
+    : "";
+  let lastName = state.user
+    ? state.user.displayName.slice(l + 1, p - 1)[0].toUpperCase() +
+      state.user.displayName
+        .slice(l + 1, p - 1)
+        .slice(1)
+        .toLowerCase()
+    : "";
   let profession = state.user ? state.user.displayName.slice(p + 1, d - 1) : "";
   let date = state.user ? state.user.displayName.slice(d + 1, u - 1) + "*" : "";
   let univer = state.user ? state.user.displayName.slice(u + 1, de - 1) : "";
   let description = state.user ? state.user.displayName.slice(de + 1, lde) : "";
 
   let first =
-    state.user && state.user.displayName > 20 ? date.indexOf("-") : "";
-  let second =
-    state.user && state.user.displayName > 20 ? date.lastIndexOf("-") : "";
-  let last = state.user && state.user.displayName > 20 ? date.indexOf("*") : "";
-  let year =
-    state.user && state.user.displayName > 20 ? date.slice(0, first) : "";
-  let day =
-    state.user && state.user.displayName > 20
-      ? date.slice(second + 1, last - 7)
-      : "";
-  let month =
-    state.user && state.user.displayName > 20
-      ? date.slice(first + 1, second)
-      : "";
+    state.user && state.user.displayName.length > 10 ? date.indexOf("-") : "";
+  let second = state.user ? date.lastIndexOf("-") : "";
+  let last = state.user ? date.indexOf("*") : "";
+  let year = state.user ? date.slice(0, first) : "";
+  let day = state.user ? date.slice(second + 1, last) : "";
+  let month = state.user ? date.slice(first + 1, second) : "";
   function checkMonth() {
     if (month == "01") {
       return "января";
