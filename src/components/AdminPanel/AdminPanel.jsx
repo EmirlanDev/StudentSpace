@@ -90,11 +90,16 @@ const AdminPanel = () => {
           />
           <div className="adminPanel__profil__text">
             <h2>
-              {name || lastName
-                ? `${name} ${lastName}` || user.displayName
+              {user && user.displayName.length > 20
+                ? `${name} ${lastName}`
                 : "Ваше имя"}
             </h2>
-            <h3>Студент {univer}</h3>
+            <h3>
+              Студент{" "}
+              {user && user.displayName.length > 20
+                ? univer
+                : "Ваш университет"}
+            </h3>
           </div>
         </div>
         <nav>

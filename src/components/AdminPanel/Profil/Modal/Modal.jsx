@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useStateContext } from "./../../../../context/StateContext";
 import { GrClose } from "react-icons/gr";
 import { useAuthContext } from "./../../../../context/AuthContext";
-import { updateProfile } from "firebase/auth";
+import { updatePhoneNumber, updateProfile } from "firebase/auth";
 
 const Modal = () => {
   const ref = useRef();
@@ -55,13 +55,10 @@ const Modal = () => {
       ?${values.date} 
       #${values.univer} 
       <${values.description}>`,
-    });
-    updateProfile(user, {
       photoURL: values.image ? values.image : "",
     });
     setModal(false);
   }
-  console.log(user);
 
   return (
     modal && (

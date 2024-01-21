@@ -73,12 +73,21 @@ const AuthContext = ({ children }) => {
   let univer = state.user ? state.user.displayName.slice(u + 1, de - 1) : "";
   let description = state.user ? state.user.displayName.slice(de + 1, lde) : "";
 
-  let first = date.indexOf("-");
-  let second = date.lastIndexOf("-");
-  let last = date.indexOf("*");
-  let year = date.slice(0, first);
-  let day = date.slice(second + 1, last - 7);
-  let month = date.slice(first + 1, second);
+  let first =
+    state.user && state.user.displayName > 20 ? date.indexOf("-") : "";
+  let second =
+    state.user && state.user.displayName > 20 ? date.lastIndexOf("-") : "";
+  let last = state.user && state.user.displayName > 20 ? date.indexOf("*") : "";
+  let year =
+    state.user && state.user.displayName > 20 ? date.slice(0, first) : "";
+  let day =
+    state.user && state.user.displayName > 20
+      ? date.slice(second + 1, last - 7)
+      : "";
+  let month =
+    state.user && state.user.displayName > 20
+      ? date.slice(first + 1, second)
+      : "";
   function checkMonth() {
     if (month == "01") {
       return "января";

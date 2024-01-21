@@ -5,7 +5,6 @@ const Profil = () => {
   const { user, name, lastName, profession, updateDate, univer, description } =
     useAuthContext();
   const { setModal } = useStateContext();
-  console.log(user);
 
   return (
     <section id="profil">
@@ -30,11 +29,15 @@ const Profil = () => {
             <div className="profil__info__text-name__edit">
               <div>
                 <h2>
-                  {name || lastName || user
-                    ? `${name} ${lastName}` || user.displayName
+                  {user && user.displayName.length > 20
+                    ? `${name} ${lastName}`
                     : "Ваше Имя"}
                 </h2>
-                <h3>{profession ? profession : "Ваша Профессия"}</h3>
+                <h3>
+                  {user && user.displayName.length > 20
+                    ? profession
+                    : "Ваша Профессия"}
+                </h3>
               </div>
               <button
                 onClick={() => {
@@ -50,7 +53,7 @@ const Profil = () => {
           <div className="profil__info__descr">
             <h4>Описание:</h4>
             <p>
-              {description
+              {user && user.displayName.length > 20
                 ? description
                 : `Модель подписки и размещение рекламы предоставляют потенциальные
               источники дохода для проекта. На основе анализа рынка можно
@@ -59,11 +62,19 @@ const Profil = () => {
           </div>
           <div className="profil__info__univer">
             <h4>Университет:</h4>
-            <p>{univer ? univer : "Ваш Университет"}</p>
+            <p>
+              {user && user.displayName.length > 20
+                ? univer
+                : "Ваш Университет"}
+            </p>
           </div>
           <div className="profil__info__date">
             <h4>Дата рождения:</h4>
-            <p>{updateDate ? updateDate : "Ваша дата рождения"} </p>
+            <p>
+              {user && user.displayName.length > 20
+                ? updateDate
+                : "Ваша дата рождения"}{" "}
+            </p>
           </div>
           <div className="profil__info__mob">
             <h4>Соц. сети:</h4>
