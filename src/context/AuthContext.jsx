@@ -117,6 +117,7 @@ const AuthContext = ({ children }) => {
     profession,
     updateDate,
     univer,
+    date,
     description,
   };
 

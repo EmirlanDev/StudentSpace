@@ -82,7 +82,7 @@ const AdminPanel = () => {
         >
           <img
             src={
-              user
+              user && user.photoURL
                 ? user.photoURL
                 : "https://cdn-icons-png.freepik.com/512/3177/3177440.png"
             }
