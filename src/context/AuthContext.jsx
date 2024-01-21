@@ -7,7 +7,6 @@ import {
 import React, { createContext, useContext, useEffect, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "./../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
 
 const authContext = createContext();
 export const useAuthContext = () => useContext(authContext);
@@ -30,7 +29,6 @@ const reducer = (state, action) => {
 const AuthContext = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   const googleProvider = new GoogleAuthProvider();
-  const navigate = useNavigate();
 
   function checkUser() {
     return onAuthStateChanged(auth, (user) => {
@@ -85,8 +83,7 @@ const AuthContext = ({ children }) => {
   let univer = state.user ? state.user.displayName.slice(u + 1, de - 1) : "";
   let description = state.user ? state.user.displayName.slice(de + 1, lde) : "";
 
-  let first =
-    state.user && state.user.displayName.length > 10 ? date.indexOf("-") : "";
+  let first = state.user ? date.indexOf("-") : "";
   let second = state.user ? date.lastIndexOf("-") : "";
   let last = state.user ? date.indexOf("*") : "";
   let year = state.user ? date.slice(0, first) : "";
@@ -120,7 +117,6 @@ const AuthContext = ({ children }) => {
     }
   }
   let updateDate = `${day} ${checkMonth()} ${year} года `;
-
   const values = {
     logOut,
     authWithGoogle,

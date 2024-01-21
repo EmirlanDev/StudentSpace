@@ -139,7 +139,9 @@ const Modal = () => {
                 ></textarea>
               </label>
 
-              <button onClick={submitupdateProfile}>Сохранить</button>
+              <a href="/adminPanel">
+                <button onClick={submitupdateProfile}>Сохранить</button>
+              </a>
             </div>
           </div>
         </div>

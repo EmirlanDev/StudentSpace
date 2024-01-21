@@ -76,15 +76,18 @@
         display: flex;
         gap: 30px;
       }
-      button {
-        border-radius: 6px;
-        background: #1d53c5;
-        border: none;
-        color: #fff;
-        width: 180px;
-        margin: 30px auto 0;
-        padding: 16px;
-        font-size: 22px;
+      a {
+        text-align: end;
+        button {
+          border-radius: 6px;
+          background: #1d53c5;
+          border: none;
+          color: #fff;
+          width: 180px;
+          margin: 30px auto 0;
+          padding: 16px;
+          font-size: 22px;
+        }
       }
     }
   }
