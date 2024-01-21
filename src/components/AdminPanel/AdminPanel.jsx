@@ -41,7 +41,7 @@ const AdminPanel = () => {
     modal,
   } = useStateContext();
 
-  const { user, logOut } = useAuthContext();
+  const { user, logOut, name, lastName, univer } = useAuthContext();
   const navigate = useNavigate();
 
   return (
@@ -89,8 +89,12 @@ const AdminPanel = () => {
             alt="profil"
           />
           <div className="adminPanel__profil__text">
-            <h2>{"Ваше имя"}</h2>
-            <h3>Студент</h3>
+            <h2>
+              {name || lastName
+                ? `${name} ${lastName}` || user.displayName
+                : "Ваше имя"}
+            </h2>
+            <h3>Студент {univer}</h3>
           </div>
         </div>
         <nav>

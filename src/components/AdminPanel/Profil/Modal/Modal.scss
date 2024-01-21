@@ -10,7 +10,7 @@
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 40px 60px;
-    width: 40%;
+    width: 50%;
     &__title {
       display: flex;
       justify-content: space-between;
@@ -43,9 +43,32 @@
         width: 100%;
         margin-top: 5px;
         max-width: 600px;
+        max-width: 100%;
+      }
+      .file {
+        display: none;
+      }
+      .labelFile {
+        position: relative;
+        height: 100px;
+        &::before {
+          position: absolute;
+          content: "Добавить фото";
+          top: 30px;
+          background: #909090;
+          color: #fff;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 200px;
+          padding: 13px;
+          border-radius: 10px;
+        }
       }
       &__name,
-      &__date {
+      &__date,
+      &__img {
         display: flex;
         gap: 30px;
       }
@@ -54,10 +77,89 @@
         background: #1d53c5;
         border: none;
         color: #fff;
-        width: 40%;
+        width: 180px;
         margin: 30px auto 0;
         padding: 16px;
         font-size: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #modal {
+    .modal {
+      width: 55%;
+      //   top: 45%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #modal {
+    .modal {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #modal {
+    .modal {
+      width: 65%;
+      //   top: 40%;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  #modal {
+    .modal {
+      width: 80%;
+      padding: 30px 40px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #modal {
+    .modal {
+      width: 80%;
+      padding: 30px 40px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &__update-inputs {
+        &__name,
+        &__date,
+        &__img {
+          flex-direction: column;
+          gap: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  #modal {
+    height: 105vh;
+    .modal {
+      width: 100%;
+      padding: 30px 30px;
+      top: 50%;
+      border-radius: 0;
+      height: 103%;
+
+      &__update-inputs {
+        input,
+        textarea {
+          padding: 8px 10px;
+        }
+        button {
+          padding: 10px;
+          font-size: 18px;
+        }
       }
     }
   }

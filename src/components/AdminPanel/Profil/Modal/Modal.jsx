@@ -2,11 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useStateContext } from "./../../../../context/StateContext";
 import { GrClose } from "react-icons/gr";
 import { useAuthContext } from "./../../../../context/AuthContext";
-import {
-  updateCurrentUser,
-  updatePhoneNumber,
-  updateProfile,
-} from "firebase/auth";
+import { updateProfile } from "firebase/auth";
 
 const Modal = () => {
   const ref = useRef();
@@ -19,7 +15,15 @@ const Modal = () => {
     univer: "",
     date: "",
     description: "",
+    image: "",
   });
+
+  function Img(e) {
+    const file = e.target.files[0];
+    if (file) {
+      setValues({ ...values, image: URL.createObjectURL(file) });
+    }
+  }
 
   console.log(values);
 
@@ -44,13 +48,16 @@ const Modal = () => {
 
   function submitupdateProfile() {
     updateProfile(user, {
-      displayName: JSON.stringify({
-        userName: `${values.name} ${values.lastName}`,
-        profession: values.profession,
-        univer: values.univer,
-        date: values.date,
-        description: values.description,
-      }),
+      displayName: `
+      1${values.name} 
+      2${values.lastName} 
+      3${values.profession} 
+      ?${values.date} 
+      #${values.univer} 
+      <${values.description}>`,
+    });
+    updateProfile(user, {
+      photoURL: values.image ? values.image : "",
     });
     setModal(false);
   }
@@ -117,6 +124,10 @@ const Modal = () => {
                     }
                     type="text"
                   />
+                </label>
+                <label className="labelFile">
+                  Фото:
+                  <input onChange={Img} className="file" type="file" />
                 </label>
               </div>
 
