@@ -78,9 +78,7 @@ const SignIn = () => {
           <button
             onClick={() => {
               authWithGoogle();
-              setTimeout(() => {
-                navigate("/adminPanel");
-              }, 5000);
+              user ? navigate("/adminPanel") : navigate("");
             }}
           >
             <img src={google} alt="google" /> Google
