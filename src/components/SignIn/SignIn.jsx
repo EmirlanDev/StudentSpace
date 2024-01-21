@@ -31,8 +31,6 @@ const SignIn = () => {
   let first = error.indexOf("/");
   let last = error.lastIndexOf(")");
 
-  const { authWithGoogle } = useAuthContext();
-
   return (
     <section id="signIn">
       <img className="mainImg" src={signInImg} alt="signIn" />
