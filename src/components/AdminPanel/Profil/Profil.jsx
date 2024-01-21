@@ -2,7 +2,7 @@ import React from "react";
 import { useAuthContext } from "./../../../context/AuthContext";
 import { useStateContext } from "./../../../context/StateContext";
 const Profil = () => {
-  const { user, name, lastName, profession, updateDate, univer, description } =
+  const { user, name, lastName, profession, date, univer, description } =
     useAuthContext();
   const { setModal } = useStateContext();
 
@@ -76,7 +76,7 @@ const Profil = () => {
             <h4>Дата рождения:</h4>
             <p>
               {user && user.displayName.length > 20
-                ? updateDate
+                ? date
                 : "Ваша дата рождения"}
             </p>
           </div>

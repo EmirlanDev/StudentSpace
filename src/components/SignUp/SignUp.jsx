@@ -21,6 +21,7 @@ const SignUp = () => {
   const [error, setError] = useState("");
 
   const { user, authWithGoogle } = useAuthContext();
+  console.log(user);
 
   function register() {
     createUserWithEmailAndPassword(auth, email, passsword)
@@ -30,6 +31,7 @@ const SignUp = () => {
           displayName: `${name ? name : ""} ${lastName ? lastName : ""}`,
           photoURL: "https://cdn-icons-png.freepik.com/512/3177/3177440.png",
         });
+        user ? navigate("/adminPanel") : navigate("/adminPanel");
       })
       .catch((error) => {
         setError(error.message);
@@ -104,13 +106,7 @@ const SignUp = () => {
                 {error.slice(first + 1, last)}
               </div>
             ) : null}
-            <button
-              onClick={() => {
-                register();
-                user ? navigate("/adminPanel") : navigate("");
-              }}
-              className="regist"
-            >
+            <button onClick={register} className="regist">
               Зарегистрироваться
             </button>
             <p>Или</p>
@@ -118,7 +114,6 @@ const SignUp = () => {
               <button
                 onClick={() => {
                   authWithGoogle();
-                  user ? navigate("/adminPanel") : navigate("");
                 }}
               >
                 <img src={google} alt="google" /> Google
