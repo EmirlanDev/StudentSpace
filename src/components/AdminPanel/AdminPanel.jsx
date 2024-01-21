@@ -182,6 +182,26 @@ const AdminPanel = () => {
           </li>
           <li
             style={{
+              background: board ? "#fff" : "",
+              color: board ? "#1D53C5" : "",
+            }}
+            onClick={() => {
+              setProfil(false);
+              setNews(false);
+              setQuestion(false);
+              setNetworking(false);
+              setStudyRoom(false);
+              setEvent(false);
+              setChats(false);
+              setWork(false);
+              setNewsDetail(false);
+              setMenu(false);
+              setBoard(true);
+            }}>
+            Планирование
+          </li>
+          <li
+            style={{
               background: event ? "#fff" : "",
               color: event ? "#1D53C5" : "",
             }}

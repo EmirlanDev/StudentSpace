@@ -1,20 +1,6 @@
 import React from "react";
-import { useStateContext } from "./../../../context/StateContext";
 
 const StudyRoom = () => {
-  const {
-    setProfil,
-    setNews,
-    setQuestion,
-    setNetworking,
-    setStudyRoom,
-    setEvent,
-    setChats,
-    setWork,
-    setNewsDetail,
-    setMenu,
-    setBoard,
-  } = useStateContext();
 
   return (
     <section id="study-room">
@@ -79,19 +65,6 @@ const StudyRoom = () => {
             <div className="study-room__inform-content__study-schedule__btn">
               <div>
                 <button
-                  onClick={() => {
-                    setProfil(false);
-                    setNews(false);
-                    setQuestion(false);
-                    setNetworking(false);
-                    setStudyRoom(false);
-                    setEvent(false);
-                    setChats(false);
-                    setWork(false);
-                    setNewsDetail(false);
-                    setMenu(false);
-                    setBoard(true);
-                  }}
                 >
                   Начать сессию
                 </button>
