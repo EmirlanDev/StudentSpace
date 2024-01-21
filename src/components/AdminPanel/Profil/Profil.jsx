@@ -2,11 +2,18 @@ import React from "react";
 import { useAuthContext } from "./../../../context/AuthContext";
 import { useStateContext } from "./../../../context/StateContext";
 const Profil = () => {
-  const { user, name, lastName, profession, date, univer, description } =
-    useAuthContext();
+  const {
+    user,
+    name,
+    lastName,
+    profession,
+    date,
+    univer,
+    description,
+    disName,
+    updateDate,
+  } = useAuthContext();
   const { setModal } = useStateContext();
-
-  console.log(user);
 
   return (
     <section id="profil">
@@ -31,16 +38,14 @@ const Profil = () => {
             <div className="profil__info__text-name__edit">
               <div>
                 <h2>
-                  {user && user.displayName.length > 30
+                  {user && disName.length > 30
                     ? `${name} ${lastName}`
-                    : user && user.displayName.length < 20
+                    : user && disName.length < 20
                     ? user.displayName
                     : "Ваше Имя"}
                 </h2>
                 <h3>
-                  {user && user.displayName.length > 20
-                    ? profession
-                    : "Ваша Профессия"}
+                  {user && disName.length > 20 ? profession : "Ваша Профессия"}
                 </h3>
               </div>
               <button
@@ -48,8 +53,7 @@ const Profil = () => {
                   setTimeout(() => {
                     setModal(true);
                   }, 1);
-                }}
-              >
+                }}>
                 Редактировать
               </button>
             </div>
@@ -57,7 +61,7 @@ const Profil = () => {
           <div className="profil__info__descr">
             <h4>Описание:</h4>
             <p>
-              {user && user.displayName.length > 20
+              {user && disName.length > 20
                 ? description
                 : `Модель подписки и размещение рекламы предоставляют потенциальные
               источники дохода для проекта. На основе анализа рынка можно
@@ -66,17 +70,13 @@ const Profil = () => {
           </div>
           <div className="profil__info__univer">
             <h4>Университет:</h4>
-            <p>
-              {user && user.displayName.length > 20
-                ? univer
-                : "Ваш Университет"}
-            </p>
+            <p>{user && disName.length > 20 ? univer : "Ваш Университет"}</p>
           </div>
           <div className="profil__info__date">
             <h4>Дата рождения:</h4>
             <p>
-              {user && user.displayName.length > 20
-                ? date
+              {date !== "*" && user && disName.length > 20
+                ? updateDate
                 : "Ваша дата рождения"}
             </p>
           </div>

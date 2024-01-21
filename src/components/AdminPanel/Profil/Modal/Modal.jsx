@@ -7,14 +7,32 @@ import { updatePhoneNumber, updateProfile } from "firebase/auth";
 const Modal = () => {
   const ref = useRef();
   const { setModal, modal } = useStateContext();
-  const { user } = useAuthContext();
+  const {
+    user,
+    name,
+    lastName,
+    profession,
+    date,
+    univer,
+    description,
+    disName,
+    updateDate,
+  } = useAuthContext();
+
+  let changeDate = date
+    ? date
+        .split(" ")
+        .filter((el) => el !== "*")
+        .join("")
+    : "";
+
   const [values, setValues] = useState({
-    name: "",
-    lastName: "",
-    profession: "",
-    univer: "",
-    date: "",
-    description: "",
+    name: name,
+    lastName: lastName,
+    profession: profession,
+    univer: univer,
+    date: changeDate,
+    description: description,
     image: "",
   });
 
@@ -22,12 +40,10 @@ const Modal = () => {
     const file = e.target.files[0];
     if (file) {
       file
-        ? setValues(user.photoURL)
-        : setValues({ ...values, image: URL.createObjectURL(file) });
+        ? setValues({ ...values, image: URL.createObjectURL(file) })
+        : setValues({ ...values, image: user.photoURL });
     }
   }
-
-  console.log(values);
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
@@ -50,23 +66,20 @@ const Modal = () => {
 
   function submitupdateProfile() {
     updateProfile(user, {
-      displayName: `
-      1${values.name} 
-      2${values.lastName} 
-      3${values.profession} 
-      ?${values.date} 
-      #${values.univer} 
-      <${values.description}>`,
-      photoURL: values.image ? values.image : "",
+      displayName: `1${values.name}2${values.lastName}3${values.profession}?${values.date}#${values.univer}<${values.description}>`,
+      photoURL: values.image ? values.image : null,
     });
     setModal(false);
   }
+
+  console.log(values.image);
 
   return (
     modal && (
       <div id="modal">
         <div className="bg">
           <div className="modal" ref={ref}>
+            <img src={values.image} alt="" />
             <div className="modal__title">
               <h1>Редактировать</h1>
               <button onClick={() => setModal(false)}>
@@ -82,6 +95,7 @@ const Modal = () => {
                       setValues({ ...values, name: e.target.value })
                     }
                     type="text"
+                    value={values.name}
                   />
                 </label>
                 <label>
@@ -91,6 +105,7 @@ const Modal = () => {
                       setValues({ ...values, lastName: e.target.value })
                     }
                     type="text"
+                    value={values.lastName}
                   />
                 </label>
               </div>
@@ -102,6 +117,7 @@ const Modal = () => {
                       setValues({ ...values, profession: e.target.value })
                     }
                     type="text"
+                    value={values.profession}
                   />
                 </label>
                 <label>
@@ -111,6 +127,7 @@ const Modal = () => {
                       setValues({ ...values, date: e.target.value })
                     }
                     type="date"
+                    value={values.date}
                   />
                 </label>
               </div>
@@ -122,6 +139,7 @@ const Modal = () => {
                       setValues({ ...values, univer: e.target.value })
                     }
                     type="text"
+                    value={values.univer}
                   />
                 </label>
                 <label className="labelFile">
@@ -136,12 +154,9 @@ const Modal = () => {
                   onChange={(e) =>
                     setValues({ ...values, description: e.target.value })
                   }
-                ></textarea>
+                  value={values.description}></textarea>
               </label>
-
-              <a href="/adminPanel">
-                <button onClick={submitupdateProfile}>Сохранить</button>
-              </a>
+              <button onClick={submitupdateProfile}>Сохранить</button>
             </div>
           </div>
         </div>

@@ -41,15 +41,14 @@ const AdminPanel = () => {
     modal,
   } = useStateContext();
 
-  const { user, logOut, name, lastName, univer } = useAuthContext();
+  const { user, logOut, name, lastName, univer, disName } = useAuthContext();
   const navigate = useNavigate();
 
   return (
     <section id="adminPanel">
       <div
         style={{ transform: menu ? "translateX(0)" : "" }}
-        className="adminPanel"
-      >
+        className="adminPanel">
         <svg
           onClick={() => setMenu(false)}
           className="adminPanel__back"
@@ -57,8 +56,7 @@ const AdminPanel = () => {
           width="16"
           height="20"
           viewBox="0 0 8 12"
-          fill="none"
-        >
+          fill="none">
           <path
             d="M5.707 0L0 5.707L5.707 11.414L7.121 10L2.828 5.707L7.121 1.414L5.707 0Z"
             fill="white"
@@ -78,8 +76,7 @@ const AdminPanel = () => {
             setMenu(false);
             setBoard(false);
           }}
-          className="adminPanel__profil"
-        >
+          className="adminPanel__profil">
           <img
             src={
               user && user.photoURL
@@ -90,17 +87,15 @@ const AdminPanel = () => {
           />
           <div className="adminPanel__profil__text">
             <h2>
-              {user && user.displayName.length > 30
+              {user && disName.length > 30
                 ? `${name} ${lastName}`
-                : user && user.displayName.length < 20
+                : user && disName.length < 20
                 ? user.displayName
                 : "Ваше Имя"}
             </h2>
             <h3>
-              Студент{" "}
-              {user && user.displayName.length > 20
-                ? univer
-                : "Ваш университет"}
+              Студент(-a){" "}
+              {user && disName.length > 20 ? univer : "Ваш университет"}
             </h3>
           </div>
         </div>
@@ -122,8 +117,7 @@ const AdminPanel = () => {
               setNewsDetail(false);
               setMenu(false);
               setBoard(false);
-            }}
-          >
+            }}>
             Новости
           </li>
           <li
@@ -143,8 +137,7 @@ const AdminPanel = () => {
               setNewsDetail(false);
               setMenu(false);
               setBoard(false);
-            }}
-          >
+            }}>
             Вопросы
           </li>
           <li
@@ -164,8 +157,7 @@ const AdminPanel = () => {
               setNewsDetail(false);
               setMenu(false);
               setBoard(false);
-            }}
-          >
+            }}>
             Нетворкинг
           </li>
           <li
@@ -185,8 +177,7 @@ const AdminPanel = () => {
               setNewsDetail(false);
               setMenu(false);
               setBoard(false);
-            }}
-          >
+            }}>
             Учебные комнаты
           </li>
           <li
@@ -206,8 +197,7 @@ const AdminPanel = () => {
               setNewsDetail(false);
               setMenu(false);
               setBoard(false);
-            }}
-          >
+            }}>
             Мероприятия
           </li>
           <li
@@ -227,8 +217,7 @@ const AdminPanel = () => {
               setNewsDetail(false);
               setMenu(false);
               setBoard(false);
-            }}
-          >
+            }}>
             Чаты
           </li>
           <li
@@ -248,16 +237,14 @@ const AdminPanel = () => {
               setNewsDetail(false);
               setMenu(false);
               setBoard(false);
-            }}
-          >
+            }}>
             Работа
           </li>
           <li
             onClick={() => {
               logOut();
               navigate("/");
-            }}
-          >
+            }}>
             Выйти
           </li>
         </nav>
@@ -265,8 +252,7 @@ const AdminPanel = () => {
       <div
         onClick={() => setMenu(false)}
         style={{ opacity: menu ? "1" : "0", zIndex: menu ? "" : "-100" }}
-        className="bg"
-      ></div>
+        className="bg"></div>
       <div className="pages">
         <svg
           style={{ display: newsDetail ? "none" : "" }}
@@ -276,8 +262,7 @@ const AdminPanel = () => {
           width="35"
           height="35"
           viewBox="0 0 35 35"
-          fill="none"
-        >
+          fill="none">
           <circle
             cx="17.4998"
             cy="17.5"

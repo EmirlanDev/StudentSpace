@@ -1,6 +1,9 @@
 #modal {
   position: fixed;
   z-index: 300;
+  img{
+    display: none;
+  }
   .modal {
     position: absolute;
     top: 50%;
@@ -76,18 +79,16 @@
         display: flex;
         gap: 30px;
       }
-      a {
-        text-align: end;
-        button {
-          border-radius: 6px;
-          background: #1d53c5;
-          border: none;
-          color: #fff;
-          width: 180px;
-          margin: 30px auto 0;
-          padding: 16px;
-          font-size: 22px;
-        }
+
+      button {
+        border-radius: 6px;
+        background: #1d53c5;
+        border: none;
+        color: #fff;
+        width: 180px;
+        margin: 30px 0 0 auto;
+        padding: 16px;
+        font-size: 22px;
       }
     }
   }

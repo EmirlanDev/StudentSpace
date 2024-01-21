@@ -21,7 +21,7 @@ const SignUp = () => {
   const [error, setError] = useState("");
 
   const { user, authWithGoogle } = useAuthContext();
-  console.log(user);
+  // console.log(user);
 
   function register() {
     createUserWithEmailAndPassword(auth, email, passsword)
