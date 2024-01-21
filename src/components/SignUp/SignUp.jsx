@@ -5,13 +5,40 @@ import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "./../../context/AuthContext";
+import { MdErrorOutline } from "react-icons/md";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "./../../firebase";
 
 const SignUp = () => {
   const [eye, setEye] = useState(false);
   const [checkBox, setCheckBox] = useState(false);
   const navigate = useNavigate();
 
-  const { authWithGoogle } = useAuthContext();
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [passsword, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const { user, authWithGoogle } = useAuthContext();
+
+  function register() {
+    createUserWithEmailAndPassword(auth, email, passsword)
+      .then((res) => {
+        let person = res.user;
+        updateProfile(person, {
+          displayName: `${name ? name : ""} ${lastName ? lastName : ""}`,
+          photoURL: "https://cdn-icons-png.freepik.com/512/3177/3177440.png",
+        });
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  }
+
+  let first = error.indexOf("/");
+  let last = error.lastIndexOf(")");
+
 
   return (
     <section id="signUp">
@@ -20,13 +47,26 @@ const SignUp = () => {
           <div className="form">
             <h1>Регистрация</h1>
             <label>Имя</label>
-            <input type="text" placeholder="Введите свое имя" />
+            <input
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              placeholder="Введите свое имя"
+            />
             <label>Фамилие</label>
-            <input type="text" placeholder="Введите свое фамилие" />
+            <input
+              onChange={(e) => setLastName(e.target.value)}
+              type="text"
+              placeholder="Введите свое фамилие"
+            />
             <label>Почта</label>
-            <input type="text" placeholder="Введите свою почту" />
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              placeholder="Введите свою почту"
+            />
             <label>Пароль*</label>
             <input
+              onChange={(e) => setPassword(e.target.value)}
               type={eye ? "text" : "password"}
               placeholder="Введите свой пароль"
             />
@@ -35,6 +75,7 @@ const SignUp = () => {
             ) : (
               <IoEyeOffOutline onClick={() => setEye(true)} className="eye" />
             )}
+
             <label onClick={() => setCheckBox(!checkBox)} className="checkBox">
               <div
                 style={{
@@ -58,7 +99,21 @@ const SignUp = () => {
               </div>
               Согласен с Условиями
             </label>
-            <button onClick={() => navigate("/adminPanel")} className="regist">
+            {error ? (
+              <div className="error">
+                <MdErrorOutline style={{ fontSize: "25px" }} />
+                {error.slice(first + 1, last)}
+              </div>
+            ) : null}
+            <button
+              onClick={() => {
+                register();
+                setTimeout(() => {
+                  user ? navigate("/adminPanel") : navigate("");
+                }, 2000);
+              }}
+              className="regist"
+            >
               Зарегистрироваться
             </button>
             <p>Или</p>
@@ -68,7 +123,7 @@ const SignUp = () => {
                   authWithGoogle();
                   setTimeout(() => {
                     navigate("/adminPanel");
-                  }, 5000);
+                  }, 8000);
                 }}
               >
                 <img src={google} alt="google" /> Google

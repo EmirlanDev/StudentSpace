@@ -11,6 +11,8 @@ import Work from "./Work/Work";
 import Detail from "./News/DetailPage/Detail";
 import Board from "./Board/Board";
 import { useAuthContext } from "./../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import Modal from "./Profil/Modal/Modal";
 
 const AdminPanel = () => {
   const {
@@ -36,9 +38,11 @@ const AdminPanel = () => {
     setMenu,
     board,
     setBoard,
+    modal,
   } = useStateContext();
 
-  const { user } = useAuthContext();
+  const { user, logOut } = useAuthContext();
+  const navigate = useNavigate();
 
   return (
     <section id="adminPanel">
@@ -85,7 +89,7 @@ const AdminPanel = () => {
             alt="profil"
           />
           <div className="adminPanel__profil__text">
-            <h2>{user ? user.displayName : "Ваше имя"}</h2>
+            <h2>{"Ваше имя"}</h2>
             <h3>Студент</h3>
           </div>
         </div>
@@ -237,6 +241,14 @@ const AdminPanel = () => {
           >
             Работа
           </li>
+          <li
+            onClick={() => {
+              logOut();
+              navigate("/");
+            }}
+          >
+            Выйти
+          </li>
         </nav>
       </div>
       <div
@@ -305,6 +317,7 @@ const AdminPanel = () => {
           <Board />
         ) : null}
       </div>
+      {modal ? <Modal /> : null}
     </section>
   );
 };

@@ -2,9 +2,13 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   onAuthStateChanged,
-} from "@firebase/auth";
+  signOut,
+} from "firebase/auth";
 import React, { createContext, useContext, useEffect, useReducer } from "react";
+import { useNavigate } from "react-router-dom";
 import { auth } from "./../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
 
 const authContext = createContext();
 export const useAuthContext = () => useContext(authContext);
@@ -27,6 +31,8 @@ const reducer = (state, action) => {
 const AuthContext = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   const googleProvider = new GoogleAuthProvider();
+  const navigate = useNavigate();
+
 
   function checkUser() {
     return onAuthStateChanged(auth, (user) => {
@@ -45,10 +51,17 @@ const AuthContext = ({ children }) => {
       console.log("error");
     }
   }
-  const values = {
-    authWithGoogle,
-    user: state.user,
-  };
+
+  async function logOut() {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const values = { logOut, authWithGoogle, user: state.user };
+
 
   return <authContext.Provider value={values}>{children}</authContext.Provider>;
 };
