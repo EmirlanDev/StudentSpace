@@ -54,15 +54,15 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      padding: 57px 0 0 0;
-      gap: 50px;
+      padding: 40px 0 0 0;
+      gap: 30px;
       li {
         color: #fff;
         font-size: 20px;
         font-weight: 500;
         cursor: pointer;
         padding: 10px 40px;
-        width: 290px;
+        width: 95%;
         border-radius: 4px;
       }
     }
@@ -104,12 +104,6 @@
           width: 84px;
         }
       }
-      nav {
-        li {
-          padding: 10px 20px;
-          width: 230px;
-        }
-      }
     }
     .pages {
       margin-left: 320px;
@@ -128,12 +122,6 @@
       &__profil {
         display: flex;
       }
-      nav {
-        li {
-          padding: 10px 40px;
-          width: 290px;
-        }
-      }
     }
     .pages {
       margin-left: 0;
@@ -144,9 +132,6 @@
   }
 }
 
-@media (max-width: 768) {
-}
-
 @media (max-width: 576px) {
   #adminPanel {
     .title {
@@ -154,7 +139,7 @@
     }
     .adminPanel {
       max-width: 100%;
-      width: 100%;
+      width: 85%;
       &__profil {
         img {
           width: 84px;
@@ -172,10 +157,16 @@
 @media (max-width: 452px) {
   #adminPanel {
     .adminPanel {
+      padding: 69px 16px;
       &__profil {
         img {
           max-width: 84px;
           width: 100%;
+        }
+      }
+      nav {
+        li {
+          padding: 10px 20px;
         }
       }
     }
@@ -184,10 +175,6 @@
         margin-bottom: 35px;
         font-size: 20px;
       }
-      // svg {
-      //   width: 30px;
-      //   height: 30px;
-      // }
       &__menu {
         position: absolute;
       }
