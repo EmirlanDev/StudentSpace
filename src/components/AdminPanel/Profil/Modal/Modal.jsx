@@ -37,13 +37,16 @@ const Modal = () => {
   });
 
   function Img(e) {
-    const file = e.target.files[0];
-    if (file) {
-      file
-        ? setValues({ ...values, image: URL.createObjectURL(file) })
-        : setValues({ ...values, image: user.photoURL });
-    }
+    let fileReader = e.target.files[0];
+    fileReader
+      ? setValues({
+          ...values,
+          image: URL.createObjectURL(fileReader),
+        })
+      : setValues({ ...values, image: user.photoURL });
   }
+
+  // console.log(values.image.slice(5));
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
@@ -154,7 +157,8 @@ const Modal = () => {
                   onChange={(e) =>
                     setValues({ ...values, description: e.target.value })
                   }
-                  value={values.description}></textarea>
+                  value={values.description}
+                ></textarea>
               </label>
               <button onClick={submitupdateProfile}>Сохранить</button>
             </div>

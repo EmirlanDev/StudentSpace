@@ -14,7 +14,7 @@ const Profil = () => {
     updateDate,
   } = useAuthContext();
   const { setModal } = useStateContext();
-
+  console.log(user);
   return (
     <section id="profil">
       <h1 className="title">Профиль</h1>
@@ -53,7 +53,8 @@ const Profil = () => {
                   setTimeout(() => {
                     setModal(true);
                   }, 1);
-                }}>
+                }}
+              >
                 Редактировать
               </button>
             </div>

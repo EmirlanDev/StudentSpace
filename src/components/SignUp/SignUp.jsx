@@ -31,12 +31,15 @@ const SignUp = () => {
           displayName: `${name ? name : ""} ${lastName ? lastName : ""}`,
           photoURL: "https://cdn-icons-png.freepik.com/512/3177/3177440.png",
         });
-        user ? navigate("/adminPanel") : navigate("/adminPanel");
       })
       .catch((error) => {
         setError(error.message);
       });
   }
+
+  useEffect(() => {
+    user ? navigate("/adminPanel") : navigate("");
+  }, []);
 
   let first = error.indexOf("/");
   let last = error.lastIndexOf(")");

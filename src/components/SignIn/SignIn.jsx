@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import signInImg from "../../images/SignIn.png";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
@@ -30,6 +30,10 @@ const SignIn = () => {
   }
   let first = error.indexOf("/");
   let last = error.lastIndexOf(")");
+
+  useEffect(() => {
+    user ? navigate("/adminPanel") : navigate("");
+  }, []);
 
   return (
     <section id="signIn">
@@ -63,7 +67,6 @@ const SignIn = () => {
           <button
             onClick={() => {
               handleSignInSubmit();
-              user ? navigate("/adminPanel") : navigate("");
             }}
           >
             Вход
